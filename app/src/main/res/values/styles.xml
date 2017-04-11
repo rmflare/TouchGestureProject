@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:navigationBarColor">@color/darkGreen</item>
+        <item name="android:statusBarColor">@color/darkGreen</item>
+    </style>
+
+    <style name="fragment_grid_button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/pastelOrange</item>
+    </style>
+
+</resources>
