@@ -6,7 +6,11 @@
 
     <android.support.v4.view.PagerTabStrip
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|top"/>
+        android:layout_height="50dp"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:background="@color/pastelPurple"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
 
 </android.support.v4.view.ViewPager>

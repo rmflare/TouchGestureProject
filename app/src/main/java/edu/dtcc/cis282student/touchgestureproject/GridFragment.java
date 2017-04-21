@@ -6,34 +6,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class GridFragment extends Fragment {
+public class GridFragment extends Fragment  {
+    static final String POSITION_KEY = "position key";
     int position;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        position = getArguments().getInt("position");
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_grid, container, false);
-
-        return v;
-    }
-
-    static GridFragment newInstance(int position) {
+    static GridFragment newInstance(Bundle args) {
         GridFragment frag = new GridFragment();
-        Bundle args = new Bundle();
-        args.putInt("position", position);
         frag.setArguments(args);
 
         return frag;
     }
 
-    static CharSequence getTitle(int position) {
-        return "Page " + (position + 1);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_grid, container, false);
+        position = getArguments().getInt(POSITION_KEY);
+
+        return v;
     }
 }
