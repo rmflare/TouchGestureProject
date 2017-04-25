@@ -10,18 +10,13 @@ import android.view.ViewGroup;
 public class GridPagerFragment extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_pager, container, false);
         ViewPager pager = (ViewPager) v.findViewById(R.id.fragment_pager);
-
-        pager.setAdapter(buildAdapter());
+        pager.setAdapter(new GridPagerAdapter(getChildFragmentManager()));
+        pager.setOffscreenPageLimit(2);
 
         return v;
-    }
-
-    private GridPagerAdapter buildAdapter() {
-        return(new GridPagerAdapter(getChildFragmentManager()));
     }
 }
